@@ -17,6 +17,7 @@ created = {"users": [], "items": [], "comments": []}
 
 
 async def seed():
+    print('in seed')
     for _ in range(100):
         user_name = f"{choice(user_names)}{randint(100,10000)}"
         created["users"].append(
@@ -41,4 +42,6 @@ async def seed():
             user=choice(created["users"]),
         )
 
+print('pre seed')
 seed()
+print('after seed')
